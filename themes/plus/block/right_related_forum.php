@@ -30,6 +30,7 @@
 					<a href="http://simcity.pro/go/7" style="font-size: 14px;">Sandbox</a>&nbsp; &nbsp;
 					<a href="http://simcity.pro/go/8" style="font-size: 14px;">反馈</a>&nbsp; &nbsp;
 					<a href="http://simcity.pro/go/9" style="font-size: 14px;">使用指南</a>&nbsp; &nbsp;
+					<a href="http://simcity.pro/go/18" style="font-size: 14px;">Spotlight</a>&nbsp; &nbsp;
 				</td>
 			</tr>
 		</table>
