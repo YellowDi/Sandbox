@@ -3,6 +3,7 @@
 <head>	
 <?php $this->load->view('header-meta');?>
 <title><?php echo $content['title']?> / <?php echo $settings['site_name']?></title>
+<script src="http://simcity.pro/static/common/js/topic.js" type="text/javascript"></script>
 </head>
 <body>
 <?php $this->load->view('header');?>
@@ -61,6 +62,8 @@
 					</small>
 				</div>
 
+				<div class="outdated">这是一个创建于 <?php echo $this->myclass->friendly_date($content['addtime'])?> 前的主题，其中的信息可能已经有所发展或是发生改变。</div>
+
 				<div class="cell">
 					<div class="topic_content">
 						<?php echo $content['content']?>
@@ -106,7 +109,7 @@
 				</div>
 				<?php foreach ($comment as $key=>$v){?>
 				<article>
-				<div id="r_1104181" class="cell">	
+				<div id="r_<?php echo ($page-1)*10+$key+1;?>" class="cell">	
 				    <table cellpadding="0" cellspacing="0" border="0" width="100%">
 				        <tr>
 				        	<?php if($v['avatar']) {?>
@@ -175,7 +178,7 @@
 					<input name="avatar" id="avatar" type="hidden" value="<?php echo base_url($user['middle_avatar'])?>" />
 				<div class="form-group">
 					<div class="col-md-12" id="textContain">
-						<textarea class="mll" id="reply_content" name="comment" rows="5"></textarea>
+						<textarea  maxlength="10000" style="width:  98%;" class="mll" id="reply_content" name="comment" ></textarea>
 						<div class="sep10"></div>
 							<div class="fr">
 								<div class="sep5"></div>
