@@ -51,7 +51,7 @@
 					<table cellpadding="0" cellspacing="0" border="0" width="100%">
 						<tr>
 							<td width="auto" valign="middle">
-								<gcse:searchresults-only></gcse:searchresults-only>
+								<div id="cse_g" style="margin:20px;"></div>
 							</td>
 						</tr>
 					</table>

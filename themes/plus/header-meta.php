@@ -31,5 +31,3 @@
     <script src="<?php echo base_url('static/common/js/topic.js')?>" type="text/javascript"></script>
     <meta name="description" content="" />
     <link rel="alternate" type="application/atom+xml" href="/index.xml" /> 
-    <link rel="canonical" href="http://simcity.pro/sandbox" />
-    <meta name="msvalidate.01" content="32531BCF097FE11FF59591A4E331CDC9" />

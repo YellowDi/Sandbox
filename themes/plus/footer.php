@@ -16,6 +16,27 @@
         </div>
     </div>
 </div>
+
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">
+        var customSearchControl = null;
+        function sendQuery() {
+          var textNode = document.getElementById('q');
+          if ((textNode.value == '')) {
+            customSearchControl.clearAllResults();
+          } else {
+            customSearchControl.execute(textNode.value);
+          }
+        }
+        google.load('search', '1', {language : 'zh_CN'});
+        google.setOnLoadCallback(function() {
+          customSearchControl = new google.search.CustomSearchControl('007208015538064815272:1ijbnuavq94');
+          customSearchControl.setResultSetSize(google.search.Search.LARGE_RESULTSET);
+          var options = new google.search.DrawOptions();
+          options.enableSearchResultsOnly();
+          customSearchControl.draw('cse_g', options);
+        }, true);
+        </script>
     
 </body>
 </html>
