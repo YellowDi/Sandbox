@@ -1,10 +1,10 @@
 $(document).ready(function(){        //DOM的onload事件处理函数    
   $("#comment-submit").click(function(){          //当按钮button被点击时的处理函数
-  if(check_content()){
-  postdata(); 
+	if(check_content()){
+	postdata(); 
     //button被点击时执行postdata函数
    $("#reply_content").val('');//提交清空内容
-  }    
+	}    
   });
 });
 function postdata(){                             //提交数据函数
@@ -33,42 +33,21 @@ var comment=htmldecode($("#reply_content").val());
         }
     });
 
-// send a thank to reply
-function thankReply(replyId) {
-    $('#thank_area_' + replyId).addClass("thanked").html("感谢已发送");
-    $.post('/thank/add/' + replyId , function() {
-     
-        $('#thank_area_' + replyId).addClass("thanked").html("感谢已发送");
-
-    });
-}
-// send a thank to topic
-function thankTopic(topic) {
-    
-    $.post('/thank/topic/' + topic , function() {
-     
-        $('#thank_topic').html("感谢已发送");
-
-
-    });
-}
-
-
 function replyOne(username){
     replyContent = $("#reply_content");
-  oldContent = replyContent.val();
-  prefix = "@" + username + " ";
-  newContent = ''
-  if(oldContent.length > 0){
-      if (oldContent != prefix) {
-          newContent = oldContent + "\n" + prefix;
-      }
-  } else {
-      newContent = prefix
-  }
-  replyContent.focus();
-  replyContent.val(newContent);
-  moveEnd(replyContent);
+	oldContent = replyContent.val();
+	prefix = "@" + username + " ";
+	newContent = ''
+	if(oldContent.length > 0){
+	    if (oldContent != prefix) {
+	        newContent = oldContent + "\n" + prefix;
+	    }
+	} else {
+	    newContent = prefix
+	}
+	replyContent.focus();
+	replyContent.val(newContent);
+	moveEnd(replyContent);
 }
 function check_content(){
 if($("#reply_content").val().length < 4){
@@ -76,7 +55,7 @@ alert("对不起，回复内容不能少于4个字符！")
 $("#reply_content").focus();
 return false;
 } else{
-  return true;
+	return true;
 }
 }
 
@@ -93,34 +72,10 @@ function htmldecode(str){
     str= str.replace(/&gt;/g, ">");
     str= str.replace(/&nbsp;/g, " ");
     //str= str.replace(/'/g, "\'");
-    str= str.replace(/&quot;/g, "\"");
+  	str= str.replace(/&quot;/g, "\"");
     str= str.replace(/<br>/g, "\n");
     str= str.replace(/&raquo;/g, "");
-    str= str.replace(/&amp;/g, "");
+   	str= str.replace(/&amp;/g, "");
     
-  return str;
-}
-function hideReply(replyId) {
-   $('#hide_area_' + replyId).html('<img src="http://ifacemash.duapp.com/images/load.gif"'+ "class=\"loading"+ replyId +'\" />');
-    $.post('/thank/hate/' + replyId , function() {
-     $('#thank_area_' + replyId).addClass("thanked").html("");
-     var hidehtml = "<article><div class='cell hoverable reply' id='comment_988'><div class='thank_area'><a href='#;' onclick='hidedReply("+replyId+"); class='thank'>已折叠&nbsp;&nbsp;</a></div>";
-      $('#comment_' + replyId).hide();
-        $('#article' + replyId).append(hidehtml);
-
-    });
-}
-function hidedReply(replyId) {
-   $('#hide_area_' + replyId).html('<img src="http://ifacemash.duapp.com/images/load.gif"'+ "class=\"loading"+ replyId +'\" />');
-    $.post('/thank/hated/' + replyId , function() {
-     
-        $("#tab"+replyId).show();
-         $('#hide_area_' + replyId).hide();
-
-    });
-}
-function showPubHide(replyId) {
-    $("#tab"+replyId).show();
-    $('#hide_area_' + replyId).hide();
-   
+	return str;
 }

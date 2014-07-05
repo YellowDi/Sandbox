@@ -108,7 +108,6 @@
 					<span class="gray"><?php echo $content['comments']?> 回复 &nbsp;<strong class="snow">|</strong> &nbsp;参与讨论</span>
 				</div>
 				<?php foreach ($comment as $key=>$v){?>
-				<article>
 				<div id="r_<?php echo ($page-1)*10+$key+1;?>" class="cell">	
 				    <table cellpadding="0" cellspacing="0" border="0" width="100%">
 				        <tr>
@@ -120,10 +119,9 @@
 				            <td width="10" valign="top"></td>
 				            <td width="auto" valign="top" align="left">
 				            	<div class="fr">
-				            		<div id="thank_area_1104181" class="thank_area">
+				            		<div id="thank_area_<?php echo ($page-1)*10+$key+1;?>" class="thank_area">
 				            			<?php if($this->auth->is_admin() || $this->auth->is_master($cate['cid'])){?>
-				            			<a href="<?php echo site_url('comment/del/'.$content['cid'].'/'.$v['fid'].'/'.$v['id']);?>" class="thank" style="color: #ccc;"><span class="glyphicon glyphicon-remove-sign"></span>删除</a>
-				            			&nbsp; &nbsp; &nbsp; 
+				            			<a href="<?php echo site_url('comment/del/'.$content['cid'].'/'.$v['fid'].'/'.$v['id']);?>" class="thank" style="color: #ccc;"><span class="glyphicon glyphicon-remove-sign"></span>删除</a>&nbsp; &nbsp; &nbsp; 
 				            			<?php }?>
 				            			<?php if($this->auth->is_user($v['uid']) || $this->auth->is_admin() || $this->auth->is_master($cate['cid'])){?>
 				            			<!--a href="<?php echo site_url('comment/edit/'.$content['cid'].'/'.$v['fid'].'/'.$v['id']);?>" class="thank"><span class="glyphicon glyphicon-remove-sign"></span>编辑</a-->
@@ -142,7 +140,6 @@
 				        </tr>
 				    </table>
 				</div>
-				</article>
 				<?php }?>
 
 				<?php if($content['comments']>10){?>
