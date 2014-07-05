@@ -104,7 +104,10 @@
 							</td>
 						</tr>
 					</table>
-				</div>
+				</div>			
+			    <div class="inner">
+			        <div class="reply_content"><?php echo $v['content']?></div>
+			    </div>
 				<?php } ?>
 	 			<div class="inner"><span class="chevron">»</span> <a href="#"><?php echo $username?> 创建的更多回复</a></div>
 	 		</div>
