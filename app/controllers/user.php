@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+﻿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 #doc
 #	classname:	User
 #	scope:		PUBLIC
@@ -222,7 +222,7 @@ class User extends SB_Controller
 			
 		if(@$array['1'] === $checkCode ){
 			if($_POST){
-				$password = $this->input->post('password');
+				$password = $this->input->post(md5('password')); 
 				if($this->user_m->update_user(@$data['uid'], array('password'=>$password))){
 					$this->session->set_userdata(array ('uid' => $data['uid'], 'username' => $array['0'],'password' => $password, 'group_type' => $data['group_type'], 'gid' => $data['gid']));
 					redirect('/');

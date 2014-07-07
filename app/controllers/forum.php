@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+﻿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 #doc
 #	classname:	Forum
 #	scope:		PUBLIC
@@ -17,7 +17,7 @@ class Forum extends SB_controller
 		$this->load->model('cate_m');
 		$this->load->library('myclass');
 	}
-	public function flist ($cid, $page=1)
+	public function flist ($cid='', $page=1)
 	{
 		//权限
 		if(!$this->auth->user_permit($cid)){
