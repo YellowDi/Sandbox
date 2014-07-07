@@ -52,7 +52,7 @@ $config['proxy_ips'] = '';
 
 $config['admin_folder']		= 'admin';
 
-$config['time_zone'] = date_default_timezone_get();
+$config['time_zone'] = date_default_timezone_get('Asia/Shanghai');
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
