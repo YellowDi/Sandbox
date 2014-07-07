@@ -11,7 +11,7 @@
                 <div class="sep5"></div>
                 Lovingly made by <b>YellowDi</b>
                 <div class="sep20"></div>
-                <span class="small fade">STB VERSION: 1.1.5.1 · {elapsed_time}s<br />♥ Do have faith in what you're doing.</span>
+                <span class="small fade">STB VERSION: 1.1.5 · {elapsed_time}s<br />♥ Do have faith in what you're doing.</span>
             <div class="sep10"></div>
         </div>
     </div>
