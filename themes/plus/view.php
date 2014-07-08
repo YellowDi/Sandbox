@@ -3,7 +3,6 @@
 <head>	
 <?php $this->load->view('header-meta');?>
 <title><?php echo $content['title']?> / <?php echo $settings['site_name']?></title>
-<script src="http://simcity.pro/static/common/js/topic.js" type="text/javascript"></script>
 </head>
 <body>
 <?php $this->load->view('header');?>
@@ -112,7 +111,7 @@
 				    <table cellpadding="0" cellspacing="0" border="0" width="100%">
 				        <tr>
 				        	<?php if($v['avatar']) {?>
-				            <td width="48" valign="top" align="center"><img src="<?php echo base_url($v['avatar']);?>" class="avatar" border="0" align="default" style="max-width: 48px; max-height: 48px;" /></td>
+				            <td width="48" valign="top" align="center"><img src="<?php echo base_url($v['avatar']);?>" class="avatar" border="0" align="default"/></td>
 				            <?php } else {?>
 				            <td width="48" valign="top" align="center"><img src="<?php echo base_url('uploads/avatar/default.jpg');?>" class="avatar" border="0" align="default" style="max-width: 48px; max-height: 48px;" /></td>
 				            <?php }?>
@@ -135,7 +134,7 @@
 				                <div class="sep3"></div>
 				                <strong><a href="<?php echo site_url('user/info/'.$v['uid']);?>" class="dark"><?php echo $v['username']?></a></strong>&nbsp; &nbsp;<span class="fade small"><?php echo $this->myclass->friendly_date($v['replytime'])?></span> 
 				                <div class="sep5"></div>
-				                <div class="topic_content"><?php echo stripslashes($v['content'])?></div>
+				                <div class="reply_content"><?php echo stripslashes($v['content'])?></div>
 				            </td>
 				        </tr>
 				    </table>
@@ -144,7 +143,7 @@
 
 				<?php if($content['comments']>10){?>
 				<div class="inner" style="border-top: 1px solid #e2e2e2; text-align: center;">
-					<?php echo $pagination;?></a>
+					<?php echo $pagination;?>
 				</div>
 				<?php }?> 
 
@@ -173,21 +172,28 @@
 					<input name="is_top" id="is_top" type="hidden" value="<?php echo $content['is_top']?>" />
 					<input name="username" id="username" type="hidden" value="<?php echo $user['username']?>" />
 					<input name="avatar" id="avatar" type="hidden" value="<?php echo base_url($user['middle_avatar'])?>" />
-				<div class="form-group">
+					<textarea  maxlength="10000" style="width:  98%;" class="mll" id="reply_content" name="comment" ></textarea>
+					<div class="sep10"></div>
+						<div class="fr">
+							<div class="sep5"></div>
+							<span class="gray">请尽量让自己的回复能够对别人有帮助</span>
+					</div>
+					<input  class="super normal button" data-disable-with="正在提交" type="submit" id="comment-submit" value="发送" />
+				<!--div class="form-group">
 					<div class="col-md-12" id="textContain">
-						<textarea  maxlength="10000" style="width:  98%;" class="mll" id="reply_content" name="comment" ></textarea>
+						<textarea class="mll" id="reply_content" name="comment" rows="5"></textarea>
 						<div class="sep10"></div>
 							<div class="fr">
 								<div class="sep5"></div>
 								<span class="gray">请尽量让自己的回复能够对别人有帮助</span>
 							</div>
 					</div>
-				</div>
+				</div-->
 
-				<div class="col-sm-9">
+				<!--div class="col-sm-9">
 					<input class="super normal button" data-disable-with="正在提交" type="submit" id="comment-submit" value="发送" />
 					<span id="msg"></span>
-				</div>
+				</div-->
 			</div>
 
 				<?php } else{?>
