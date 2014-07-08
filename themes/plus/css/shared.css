@@ -209,7 +209,7 @@ ol {
 }
 
 #Top {
-    background-image: url("http://simcity.pro/sandbox/themes/meiri/static/img/top_light.png");
+    background-image: url("http://simcity.pro/themes/plus/static/img/top_light.png");
     text-align: center;
     background-color: #f0f0f0;
     height: 44px;
@@ -221,7 +221,7 @@ ol {
 #Wrapper {
     text-align: center;
     background-color: #e2e2e2;
-    background-image: url("http://simcity.pro/sandbox/themes/meiri/static/img/shadow_light.png");
+    background-image: url("http://simcity.pro/themes/plus/static/img/shadow_light.png");
     background-repeat: repeat-x;
 }
 
@@ -1229,4 +1229,14 @@ a.btn_hero:hover {
     background-color: #f0f0f0;
     border: 1px solid #aaa;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+.pagination {
+    margin:10px 0;
+}
+.pagination ul>li>a:hover {
+    background-color:#F93;color:#FFF;text-decoration:none;
+}
+.center {
+    text-align:center;
 }
