@@ -158,18 +158,22 @@ function  friendly_date( $from ){
 	} 
 
 	function get_ip() {
-		$url = 'http://iframe.ip138.com/ic.asp';
-		if(function_exists('curl_init')){
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			$a = curl_exec($ch);
-		} else
-		{
-			$a = @file_get_contents($url);
+		$ip=false;
+		if(!empty($_SERVER["HTTP_CLIENT_IP"])){
+			$ip = $_SERVER["HTTP_CLIENT_IP"];
 		}
-		preg_match('/\[(.*)\]/', $a, $ip);
-		return @$ip[1];
-	}
+		if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+			$ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
+			if ($ip) { array_unshift($ips, $ip); $ip = FALSE; }
+			for ($i = 0; $i < count($ips); $i++) {
+				if (!eregi ("^(10│172.16│192.168).", $ips[$i])) {
+					$ip = $ips[$i];
+					break;
+				}
+			}
+		}
+		return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
+		}
 	//
 
 function get_domain($url){ 
