@@ -141,7 +141,7 @@
 				</div>
 				<?php }?>
 
-				<?php if($content['comments']>10){?>
+				<?php if($content['comments']>20){?>
 				<div class="inner" style="border-top: 1px solid #e2e2e2; text-align: center;">
 					<?php echo $pagination;?>
 				</div>
