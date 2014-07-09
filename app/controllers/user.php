@@ -27,7 +27,7 @@ class User extends SB_Controller
 		$data['action'] = 'user';		
 		$this->load->view('user',$data);
 	}
-	public function info ($uid)
+	public function info ($uid='')
 	{
 		$data = $this->user_m->get_user_by_id($uid);
 		//用户大头像
