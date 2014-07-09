@@ -6,7 +6,11 @@ h1 {
     padding: 0px;
 }
 img {
-max-width: 660px; width:expression(this.width > 660 ? "660px" : this.width)
+	max-width: 660px; 
+	width:expression(this.width > 660 ? "660px" : this.width);
+}
+.reply_content img{
+	max-width:560px;
 }
 .imgly {
     max-width: 660px;
