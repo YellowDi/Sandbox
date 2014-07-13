@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <title><?php echo $content['title']?> - <?php echo $settings['site_name']?></title>
@@ -121,7 +121,7 @@ at
 <span><a href="<?php echo site_url('user/info/'.$v['uid']);?>" class="dark startbbs profile_link" title="<?php echo $v['username']?>"><?php echo $v['username']?></a></span>
 <span class="snow">&nbsp;&nbsp;<?php echo $this->myclass->friendly_date($v['replytime'])?></span>
 </div>
-<div class='content reply_content'><?php echo stripslashes($v['content'])?></div>
+<div class='content topic_content'><?php echo stripslashes($v['content'])?></div>
 <div class="pull-right">
 <!--<?php echo $v['signature']?>-->
 <?php if($this->auth->is_admin() || $this->auth->is_master($cate['cid'])){?>

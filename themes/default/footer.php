@@ -24,5 +24,5 @@
 </div>-->
 </div>
 </footer>
-<script src="http://www.blacktie.co/demo/pratt/assets/js/bootstrap.js"></script>
+<script src="http://libs.useso.com/js/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </body></html>

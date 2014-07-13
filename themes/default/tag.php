@@ -16,7 +16,7 @@
 <div class='col-xs-12 col-sm-6 col-md-8'>
 
 <div class='box fix_cell'>
-<div class='cell'><a href="<?php echo site_url()?>" class="startbbs"><?php echo $settings['site_name']?></a> <span class="chevron">&nbsp;›&nbsp;</span>标签: #<?php echo $title;?> (<?php echo $tag['forums'];?>)</div>
+<div class='cell'><a href="<?php echo site_url()?>" class="startbbs"><?php echo $settings['site_name']?></a> <span class="chevron">&gt;&gt;</span>标签: #<?php echo $title;?> (<?php echo $tag['forums'];?>)</div>
 <?php if(isset($tag_list)){?>
 <?php foreach($tag_list as $v){?>
 <div class='admin cell topic'>

@@ -17,7 +17,7 @@
 
 <div class='box'>
 <div class='cell'>
-<a href="/" class="rabel"><?php echo $settings['site_name']?></a> <span class="chevron">&nbsp;›&nbsp;</span> <?php echo $title?>
+<a href="/" class="rabel"><?php echo $settings['site_name']?></a> <span class="chevron">&gt;&gt;</span> <?php echo $title?>
 </div>
 <div class='inner'>
 <span class="alert-block">

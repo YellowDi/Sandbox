@@ -12,7 +12,7 @@
 
 <div class='box'>
 <div class='cell' style="border-bottom-style: none;">
-<a href="<?php echo site_url()?>" class="startbbs"><?php echo $settings['site_name']?></a> <span class="chevron">&nbsp;›&nbsp;</span> 设置
+<a href="<?php echo site_url()?>" class="startbbs"><?php echo $settings['site_name']?></a> <span class="chevron">&gt;&gt;</span> 设置
     <ul class="nav nav-tabs" style="margin-top:10px;">
     <li>
     <a href="<?php echo site_url('settings/profile');?>">个人信息</a>

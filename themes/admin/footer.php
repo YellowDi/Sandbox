@@ -18,9 +18,9 @@ Powered by
 </div>
 </div>
 <script src="http://www.blacktie.co/demo/pratt/assets/js/smoothscroll.js"></script>
-<script src="http://www.blacktie.co/demo/pratt/assets/js/bootstrap.js"></script>
+<script src="http://libs.useso.com/js/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <!--[if lt IE 9]>
-<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
-<script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+<script src="http://libs.useso.com/js/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 </body></html>

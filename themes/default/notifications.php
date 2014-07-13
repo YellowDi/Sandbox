@@ -17,7 +17,7 @@
 
 <div class='box'>
 <div class='cell'>
-<a href="/" class="startbbs"><?php echo $settings['site_name']?></a> <span class="chevron">&nbsp;›&nbsp;</span> 提醒系统(<?php echo $users['notices']?>)
+<a href="/" class="startbbs"><?php echo $settings['site_name']?></a> <span class="chevron">&gt;&gt;</span> 提醒系统(<?php echo $users['notices']?>)
 </div>
 <?php if($notices_list){?>
 <?php foreach($notices_list as $v){?>

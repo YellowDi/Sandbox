@@ -15,6 +15,6 @@ var sitedomain='<?php echo get_domain()?>';
 </script>
 <script type="text/javascript" src="<?php echo base_url('static/common/js/jquery-1.10.2.min.js');?>"></script>
 <!--[if lt IE 9]>
-<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
-<script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+<script src="http://libs.useso.com/js/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->

@@ -12,7 +12,7 @@
 
 <div class='box'>
 <div class='cell'>
-<a href="/" class="startbbs"><?=$settings['site_name']?></a> <span class="chevron">&nbsp;›&nbsp;</span> QQ注册
+<a href="/" class="startbbs"><?=$settings['site_name']?></a> <span class="chevron">&gt;&gt;</span> QQ注册
 </div>
 <div class='cell' style="text-align: center;"><input type="radio" name="radio" id="radio_1" checked onClick="$('#form1').show(); $('#form2').hide();" /><span for="radio_1">继续完善资料</span>　　<input type="radio" name="radio" id="radio_2" onClick="$('#form1').hide(); $('#form2').show();" /><span for="radio_2">绑定现有用户</span></div>
 <div class='inner' id="form1">

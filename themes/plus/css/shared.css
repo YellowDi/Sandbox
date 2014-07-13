@@ -221,8 +221,8 @@ ol {
 #Wrapper {
     text-align: center;
     background-color: #e2e2e2;
-    background-image: url("http://simcity.pro/themes/plus/static/img/shadow_light.png");
-    background-repeat: repeat-x;
+    background-image: url("http://simcity.pro/themes/plus/static/img/shadow.png"), url("http://simcity.pro/themes/plus/static/img/circuit.png");
+    background-repeat: repeat-x, repeat-x;
 }
 
 #Bottom {
@@ -362,7 +362,7 @@ ol {
 
 .dock_area {
     background-color: #edf3f5;
-    background-image: url("/static/img/dock_shadow.png");
+    background-image: url("http://simcity.pro/themes/plus/static/img/dock_shadow.png");
     background-repeat: repeat-x;
     padding: 0px;
 }
@@ -696,7 +696,7 @@ div.node:hover .node_compose {
 }
 
 .super.button {
-    background-image: url("/static/img/bg_blended_light.png");
+    background-image: url("http://simcity.pro/themes/plus/static/img/bg_blended_light.png");
 	padding: 4px 15px 4px 15px;
 	border: 1px solid rgba(80,80,90, 0.2);
 	border-bottom-color: rgba(80,80,90, 0.35);

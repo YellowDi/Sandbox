@@ -15,7 +15,7 @@
 
 <div class='box'>
 <div class='cell'>
-<a href="<?php echo site_url()?>" class="startbbs"><?php echo $settings['site_name']?></a> <span class="chevron">&nbsp;›&nbsp;</span> 注册
+<a href="<?php echo site_url()?>" class="startbbs"><?php echo $settings['site_name']?></a> <span class="chevron">&gt;&gt;</span> 注册
 </div>
 <div class='inner'>
 <form accept-charset="UTF-8" action="<?php echo site_url('user/reg');?>" class="form-horizontal" id="new_user" method="post" novalidate="novalidate">
