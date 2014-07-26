@@ -122,9 +122,6 @@
 				            			<?php if($this->auth->is_admin() || $this->auth->is_master($cate['cid'])){?>
 				            			<a href="<?php echo site_url('comment/del/'.$content['cid'].'/'.$v['fid'].'/'.$v['id']);?>" class="thank" style="color: #ccc;"><span class="glyphicon glyphicon-remove-sign"></span>删除</a>&nbsp; &nbsp; &nbsp; 
 				            			<?php }?>
-				            			<?php if($this->auth->is_user($v['uid']) || $this->auth->is_admin() || $this->auth->is_master($cate['cid'])){?>
-				            			<!--a href="<?php echo site_url('comment/edit/'.$content['cid'].'/'.$v['fid'].'/'.$v['id']);?>" class="thank"><span class="glyphicon glyphicon-remove-sign"></span>编辑</a-->
-				            			<?php }?>
 				            		</div> &nbsp; 
 				            		<a href="#reply" data-mention="<?php echo $v['username']?>" onclick="replyOne('<?php echo $v['username']?>');">
 				            			<img src="http://simcity.pro/themes/plus/static/img/reply.png" align="absmiddle" border="0" alt="Reply" />
@@ -141,9 +138,11 @@
 				</div>
 				<?php }?>
 
-				<?php if($content['comments']>20){?>
-				<div class="inner" style="border-top: 1px solid #e2e2e2; text-align: center;">
+				<?php if($content['comments']>10){?>
+				<div class='center'>
+					<ul class="pagination pagination-sm">
 					<?php echo $pagination;?>
+					</ul>
 				</div>
 				<?php }?> 
 
